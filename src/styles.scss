@@ -1,12 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
-// Import Foundation for Sites
-// See https://foundation.zurb.com/sites/docs/sass.html for detailed info.
-@import "~foundation-sites/scss/foundation";
-@include foundation-everything;
-@import "~ngx-foundation/assets/scss/main";
-
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
+.hhax-select {
+  .c-btn {
+    height: 2.42857rem;
+    margin: 0 0 1rem;
+    padding: .5rem !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid silver;
+    background-color: #fefefe;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background-origin: content-box;
+    background-position: right -1rem center;
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    padding-right: 1.5rem;
+    -webkit-transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+  }
+  .c-angle-down {
+    top: 39% !important;
+  }
+  .c-angle-up {
+    top: 39% !important;
+  }
+}
+ 
+.hhax-tabs {
+  .nav-tabs {
+    margin-left: 0px;
+    border: none;
+    border-bottom: 1px solid #E8E8E8;
+    .nav-link {
+      padding: 1rem 1.75rem;
+      & span {
+        color: #080808 !important;
+        font-size: 1rem;
+      }
+      &:hover {
+        border: none;
+        border-bottom: 4px solid #E8E8E8;
+        background-color: #F8F8F8;
+      }
+      &.active {
+        border: none;
+        border-bottom: 4px solid  #4CC1BB;
+        color: #080808;
+        font-weight: 700;
+        background-color: transparent;
+        // box-shadow: inset 0 -4px 0 0 #4CC1BB;
+      }
+    }
+   }
+}
+.hhax-tabs-content {
+  .card-section {
+    padding-left: .85rem;
+  }
+  .cuppa-dropdown {
+    z-index: 999;
+    .dropdown-list {
+      ul {
+        li {
+          padding: 5px 10px;
+          :focus {
+            border: 1px solid #2752B4;
+          }
+        }
+      }
+    }
+  }
+}
 
 // -------
 @font-face {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vssj-angular9-boilerplate": {
+    "HHAx-WorkList": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
             "extractCss": true,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/foundation-sites/dist/css/foundation.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -78,21 +78,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vssj-angular9-boilerplate:build"
+            "browserTarget": "HHAx-WorkList:build"
           },
           "configurations": {
             "dev": {
-              "browserTarget": "vssj-angular9-boilerplate:build:dev"
+              "browserTarget": "HHAx-WorkList:build:dev"
             },
             "prod": {
-              "browserTarget": "vssj-angular9-boilerplate:build:prod"
+              "browserTarget": "HHAx-WorkList:build:prod"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vssj-angular9-boilerplate:build"
+            "browserTarget": "HHAx-WorkList:build"
           }
         },
         "test": {
@@ -122,18 +122,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vssj-angular9-boilerplate:serve"
+            "devServerTarget": "HHAx-WorkList:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vssj-angular9-boilerplate:serve:production"
+              "devServerTarget": "HHAx-WorkList:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "vssj-angular9-boilerplate",
+  "defaultProject": "HHAx-WorkList",
   "cli": {
     "analytics": "c74666e8-0c20-4429-9854-ef1fd807aa50"
   }

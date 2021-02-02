@@ -1,0 +1,76 @@
+<div class="card hhax-card">
+  <div class="card-section med readView active">
+
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-6 large-9">
+        <h2>Medicals/Other Compliance Renewals <small><span class="infoTooltip"
+              tooltip="Medicals or other compliance that are within 30 days of expiring without a set “Completion Date” and “Result” value"></span></small>
+        </h2>
+      </div>
+      <div class="cell medium-6 large-3 text-right">
+        <div class=" float-right">
+          <button class="button clear" type="button" aria-label="Print" title="Print"><svg
+              class="svg-inline--fa fa-print fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="print" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+              <path fill="currentColor"
+                d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z">
+              </path>
+            </svg><!-- <i class="fas fa-print" aria-hidden="true"></i> Font Awesome fontawesome.com --></button>
+          <button class="button hollow dropdown" type="button" data-toggle="worklistBulkActions"
+            aria-controls="worklistBulkActions" data-is-focus="false" data-yeti-box="worklistBulkActions"
+            aria-haspopup="true" aria-expanded="false" id="44o4hi-dd-anchor">Bulk Actions</button>
+        </div>
+      </div>
+    </div>
+    <!-- table -->
+    <table class="table table-data">
+      <thead class="thead-dark">
+        <tr>
+          <th>
+            <div class="hhax-check">
+              <input type="checkbox" id="tCheck" onClick="selectAllCheckboxes(this, 'tCheck')">
+              <label for="tCheck"><span class="show-for-sr">Select all</span></label>
+            </div>
+          </th>
+          <th scope="col">Medical/Compliance</th>
+          <th scope="col">Expiration Date</th>
+          <th scope="col">Reported Date</th>
+          <th scope="col">Caregiver</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Assigned To</th>
+          <th scope="col">Task Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of getData; let i = index">
+          <th scope="row">
+            <div class="hhax-check">
+              <input type="checkbox" id="tCheck{{i}}" name="tCheck">
+              <label for="tCheck{{i}}"><span class="show-for-sr">Select this row</span></label>
+            </div>
+          </th>
+          <td>{{item.medical}}</td>
+          <td>{{item.expirationdate}}</td>
+          <td>{{item.reporteddate}}</td>
+          <td>{{item.caregiver}} <br> ID: {{item.caregiverid}}</td>
+          <td tooltip="{{item.notes}}" containerClass="customClass">01/27/2021 6:41 AM by Harry Potter (jdoe)
+            <a href="#" containerClass="customClass">{{item.notes}}</a>
+          </td>
+          <td><a href="#" data-open="caregiverModal">{{item.assignedto}}</a></td>
+          <td><span class="badge warning hhax-badge-label">{{item.taskstatus}}</span></td>
+          <td></td>
+      </tbody>
+    </table>
+    <div class="grid-x grid-margin-x">
+      <!-- pagination -->
+      <!-- <div class="cell medium-6">
+        
+      </div>
+      <div class="cell medium-6 text-right">
+        <p>1 - 5 of 5</p>
+      </div> -->
+    </div>
+
+  </div>
+</div>

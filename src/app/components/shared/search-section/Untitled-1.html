@@ -1,0 +1,55 @@
+<form>
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-4 large-3">
+      <label
+        >Office
+        <!-- <select>
+            <option>All</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select> -->
+      </label>
+      <app-multi-select
+        *ngIf="officeOptions"
+        [officeOptions]="officeOptions"
+      ></app-multi-select>
+    </div>
+    <div class="cell medium-4 large-3">
+      <label
+        >Medical
+        <select>
+          <option>All</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </label>
+      <!-- <app-multi-select
+          [medicalOptions]="[medicalOptions]"
+        ></app-multi-select> -->
+    </div>
+    <div class="cell medium-4 large-3">
+      <label
+        >Expiring
+        <select>
+          <option>Within 30 days</option>
+          <option>Within 14 days</option>
+          <option>Within 7 days</option>
+          <option>Today</option>
+        </select>
+      </label>
+      <!-- <app-multi-select></app-multi-select> -->
+    </div>
+  </div>
+  <!-- Add collapsable section here -->
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-4 large-3"></div>
+  </div>
+  <div class="grid-x grid-margin-x mt-4">
+    <div class="cell">
+      <button type="submit" class="button primary">Search</button>
+      <button class="button clear">Reset</button>
+    </div>
+  </div>
+</form>
